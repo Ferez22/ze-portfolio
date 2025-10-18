@@ -38,6 +38,7 @@ ENV NODE_ENV=production
 # Uncomment the following line in case you want to disable telemetry during the build.
 # ENV NEXT_TELEMETRY_DISABLED=1
 ENV NEXT_PRIVATE_STANDALONE=true
+ENV NEXT_CACHE_DIR=/tmp/next/cache
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
@@ -47,8 +48,8 @@ COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
-# Ensuring no unnecessary permissions are given and add necessary permissions for it to run server.js properly.
-RUN chmod -R a-w+x . && chmod -R a+x .next node_modules
+# Prepare a writable cache directory for Next.js at runtime
+RUN mkdir -p /tmp/next/cache && chown -R nextjs:nodejs /tmp/next && chmod -R 775 /tmp/next
 
 USER nextjs
 
