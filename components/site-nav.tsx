@@ -10,8 +10,9 @@ export function SiteNav() {
           <Link
             href="/"
             className="mr-6 flex items-center space-x-2 font-medium text-lg tracking-tighter h-8 w-8 rounded-md overflow-hidden"
-          ></Link>
-          <b>ze-portfolio</b>
+          >
+            <img src="/ze-logo.png" alt="ze-logo" width={32} height={32} />
+          </Link>
         </div>
 
         <div className="flex flex-1 w-full justify-end">
