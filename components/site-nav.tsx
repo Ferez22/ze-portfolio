@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import { ThemeToggle } from "@/components/theme-toggle";
+import NavLinks from "./nav-links";
 
 export function SiteNav() {
   return (
@@ -10,19 +10,12 @@ export function SiteNav() {
           <Link
             href="/"
             className="mr-6 flex items-center space-x-2 font-medium text-lg tracking-tighter h-8 w-8 rounded-md overflow-hidden"
-          >
-            <img
-              src="/magicui-logo.png"
-              alt="Magic UI"
-              className="w-10 h-10 object-cover"
-            />
-          </Link>
+          ></Link>
+          <b>ze-portfolio</b>
         </div>
 
         <div className="flex flex-1 w-full justify-end">
-          <nav className="flex items-center">
-            <ThemeToggle />
-          </nav>
+          <NavLinks />
         </div>
       </div>
     </header>

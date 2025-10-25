@@ -15,14 +15,12 @@ A modern, responsive blog built with Next.js 15, Fumadocs MDX, and Tailwind CSS.
 ## 🚀 Getting Started
 
 ```bash
-# Clone the repository
-git clone <repo-url>
-cd blog-template
+# option1: build docker image and run a container
+docker build -t ze-portfolio .
+docker run --rm -p 3000:3000 ze-portfolio
 
-# Install dependencies
+# option2: Run locally
 pnpm install
-
-# Start development server
 pnpm dev
 
 # Build for production

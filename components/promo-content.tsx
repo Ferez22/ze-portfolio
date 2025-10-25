@@ -22,7 +22,7 @@ export function PromoContent({
           />
           <div className="flex-1 min-w-0">
             <p className="text-xs font-medium text-foreground/90 truncate">
-              Try Magic UI Pro
+              Follow me on Github
             </p>
             <p className="text-xs text-muted-foreground truncate">
               Beautiful design system
@@ -52,11 +52,12 @@ export function PromoContent({
         />
         <div className="flex flex-col gap-1">
           <h3 className="text-lg font-semibold tracking-tighter">
-            Try Magic UI Pro
+            Follow me on Github
           </h3>
           <p className="text-sm text-muted-foreground">
-            Magic UI Pro is a design system for building beautiful and
-            responsive web applications.
+            find my <pre>mycro-services</pre> Infrastructure on github. It is an
+            open source project ot create a robust scalable infrastructure for
+            your own server.
           </p>
         </div>
       </div>
